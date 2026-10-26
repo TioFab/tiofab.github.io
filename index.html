@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>TioFab</title>
+<meta name="description" content="Sitio oficial de TioFab: artista urbano latino, compositor y director creativo. El Subconsciente Majestral.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@600;800&display=swap">
+<style>
+/* Concepto: una sala oscura sin rostro. Anillos concéntricos = un mundo por canción. Dorado apagado sobre tinta violeta. */
+:root{--ink:#0A090F;--ink2:#12111B;--line:#2A2740;--bone:#ECE6DA;--mute:#A9A4BA;--gold:#C9A24C;--gold2:#8E7335;--veil:#2A2057;
+--display:'Syne','Arial Black',Arial,sans-serif;--body:'Hanken Grotesk','Segoe UI',Arial,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.65;
+padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--gold);text-underline-offset:3px}a:hover{color:var(--bone)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto}
+header.top{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding-block:22px}
+.marca{font-family:var(--display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:15px;color:var(--bone);text-decoration:none}
+nav.menu{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+nav.menu a{color:var(--mute);text-decoration:none}nav.menu a:hover{color:var(--gold)}
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding-block:56px 72px}
+.rol{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(64px,13vw,148px);line-height:.92;letter-spacing:-.02em;margin:0 0 8px;text-transform:uppercase}
+.sello{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin:0 0 28px}
+.lema{font-size:clamp(20px,3vw,26px);line-height:1.4;max-width:30ch;margin:0 0 30px;font-weight:300}
+.lema b{font-weight:600;color:var(--bone)}
+.acciones{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:transparent;cursor:pointer}
+.btn:hover{background:var(--gold);color:var(--ink)}
+.btn.lleno{background:var(--gold);color:var(--ink)}.btn.lleno:hover{background:var(--bone);border-color:var(--bone)}
+.mundos{width:100%;max-width:440px;justify-self:center;aspect-ratio:1/1;position:relative;background:radial-gradient(closest-side,var(--veil),transparent 78%)}
+.mundos svg{width:100%;height:100%;display:block}
+.anillo{transform-origin:200px 200px;animation:gira 90s linear infinite}.anillo.b{animation-duration:140s;animation-direction:reverse}.anillo.c{animation-duration:200s}
+@keyframes gira{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.anillo{animation:none}html{scroll-behavior:auto}}
+section{padding-block:64px;border-top:1px solid var(--line)}
+.etiqueta{font-family:var(--mono);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,4.4vw,44px);line-height:1.1;margin:0 0 28px;text-wrap:balance;max-width:20ch}
+h3{font-family:var(--display);font-weight:600;font-size:20px;margin:0 0 10px;color:var(--bone)}
+p{margin:0 0 16px;max-width:62ch}
+.tres{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:36px 44px}
+.tres>div{min-width:0}.tres p{color:var(--mute)}
+.ritmos{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0;padding:0;list-style:none}
+.ritmos li{border:1px solid var(--line);padding:7px 14px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone)}
+.rasgos{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(30px,6vw,64px);line-height:1.06;letter-spacing:-.01em;margin:0 0 22px;color:var(--bone)}
+.rasgos span{color:var(--gold2)}
+.estado{border:1px dashed var(--gold2);padding:26px;max-width:640px;background:var(--ink2)}
+.estado p{color:var(--mute);margin:0 0 12px}.estado p:last-child{margin:0}
+.redes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:0;border:1px solid var(--line)}
+.redes a{display:block;padding:22px 22px;text-decoration:none;color:var(--bone);border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0;min-width:0;overflow-wrap:anywhere}
+.redes a:hover{background:var(--ink2)}.redes small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.redes span{font-size:18px}
+.correo{font-family:var(--mono);font-size:clamp(16px,3.4vw,24px);letter-spacing:.02em;word-break:break-all;user-select:all;margin:0 0 20px;color:var(--bone)}
+footer{padding-block:34px 48px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between;font-size:14px;color:var(--mute)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 20px}footer a{color:var(--mute)}footer a:hover{color:var(--gold)}
+.legal h1{font-size:clamp(34px,7vw,64px);line-height:1;margin-bottom:10px}
+.legal .act{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:0 0 34px}
+.legal h2{font-size:22px;max-width:none;margin:36px 0 10px}.legal p,.legal li{color:#CFCADB;max-width:70ch}.legal ul{padding-left:20px;margin:0 0 16px}
+.legal{padding-block:30px 40px}
+@media (max-width:760px){.hero{grid-template-columns:minmax(0,1fr);padding-block:28px 48px}.mundos{max-width:320px;order:-1}section{padding-block:48px}}
+</style>
+</head>
+<body>
+<div class="wrap"><header class="top"><a class="marca" href="index.html">TioFab</a>
+<nav class="menu" aria-label="Principal"><a href="index.html#universo">Universo</a><a href="index.html#musica">Música</a><a href="index.html#redes">Redes</a><a href="index.html#contacto">Contacto</a></nav></header>
+<main>
+<div class="hero">
+<div>
+<p class="rol">Artista urbano latino · Compositor · Director creativo</p>
+<h1>TioFab</h1>
+<p class="sello">El Subconsciente Majestral</p>
+<p class="lema">Cada canción tiene un mundo. <b>TioFab los crea.</b></p>
+<div class="acciones"><a class="btn lleno" href="https://www.instagram.com/tiofab.oficial/" target="_blank" rel="noopener">Seguir en Instagram</a><a class="btn" href="https://www.youtube.com/@tiofab" target="_blank" rel="noopener">Ver en YouTube</a></div>
+</div>
+<div class="mundos"><svg viewBox="0 0 400 400" role="img" aria-label="Anillos concéntricos: un mundo por cada canción, sin rostro en el centro" xmlns="http://www.w3.org/2000/svg"><g class="anillo a"><circle cx="200" cy="200" r="60" fill="none" stroke="#C9A24C" stroke-opacity="0.9" stroke-width="1"/><circle cx="256.4" cy="220.5" r="4" fill="#C9A24C" fill-opacity="1.00"/></g><g class="anillo b"><circle cx="200" cy="200" r="95" fill="none" stroke="#C9A24C" stroke-opacity="0.6" stroke-width="1"/><circle cx="127.2" cy="261.1" r="3" fill="#C9A24C" fill-opacity="0.90"/></g><g class="anillo c"><circle cx="200" cy="200" r="130" fill="none" stroke="#C9A24C" stroke-opacity="0.45" stroke-width="1"/><circle cx="155.5" cy="77.8" r="4" fill="#C9A24C" fill-opacity="0.75"/></g><g class="anillo a"><circle cx="200" cy="200" r="165" fill="none" stroke="#C9A24C" stroke-opacity="0.32" stroke-width="1"/><circle cx="326.4" cy="93.9" r="3" fill="#C9A24C" fill-opacity="0.62"/></g><g class="anillo b"><circle cx="200" cy="200" r="195" fill="none" stroke="#C9A24C" stroke-opacity="0.2" stroke-width="1"/><circle cx="233.9" cy="392.0" r="4" fill="#C9A24C" fill-opacity="0.50"/></g><circle cx="200" cy="200" r="22" fill="#0A090F" stroke="#C9A24C" stroke-opacity=".9" stroke-width="1"/></svg></div>
+</div>
+
+<section id="universo">
+<p class="etiqueta">Universo</p>
+<h2>Un creador de universos musicales, visuales y emocionales.</h2>
+<div class="tres">
+<div><h3>Letras</h3><p>TioFab escribe sus propias letras. Transforma vivencias, heridas, deseos, excesos, contradicciones, ambiciones y aprendizajes en canciones que conectan con el subconsciente y con las emociones humanas.</p></div>
+<div><h3>Sonido</h3><p>Su música viaja entre el reguetón, el trap, el rap, el reggae, los corridos, el afrobeat, la champeta y otros ritmos, sin encasillarse en un solo género ni en un solo personaje.</p></div>
+<div><h3>Imagen</h3><p>Detrás de TioFab está El Subconsciente Majestral de la A a la Z: una mente creativa que imagina historias, crea personajes, diseña universos, desarrolla versiones musicales y dirige videoclips cinematográficos con la inteligencia artificial como herramienta.</p></div>
+</div>
+<ul class="ritmos" aria-label="Ritmos"><li>Reguetón</li><li>Trap</li><li>Rap</li><li>Reggae</li><li>Corridos</li><li>Afrobeat</li><li>Champeta</li></ul>
+</section>
+
+<section id="identidad">
+<p class="etiqueta">Identidad</p>
+<p class="rasgos">Misterio. Lujo. Sensualidad. Fuerza. Picardía. <span>Profundidad emocional.</span></p>
+<p>Un creador que no necesita mostrar su rostro para expresar quién es. TioFab no tiene un solo personaje, un solo sonido ni una sola historia: tiene un universo entero por descubrir.</p>
+</section>
+
+<section id="musica">
+<p class="etiqueta">Música</p>
+<h2>Las canciones llegan pronto a las plataformas digitales.</h2>
+<div class="estado">
+<p>Todavía no hay lanzamientos en plataformas de streaming. Cuando salgan, los enlaces aparecerán aquí.</p>
+<p>Mientras tanto, los vídeos están en <a href="https://www.youtube.com/@tiofab" target="_blank" rel="noopener">YouTube</a>, y los fragmentos nuevos salen en Instagram y TikTok.</p>
+</div>
+</section>
+
+<section id="vision">
+<p class="etiqueta">Visión</p>
+<h2>Más que lanzar canciones.</h2>
+<p>TioFab quiere construir una marca artística internacional, crear tendencias, desarrollar personajes y experiencias audiovisuales, conectar con el público mediante Reels, Shorts y TikToks, colaborar con otros artistas y creadores, y distribuir su música por todo el mundo.</p>
+<p><b>Transparencia.</b> TioFab es un personaje artístico creado con ayuda de inteligencia artificial. Las letras son de su creador; los videoclips y la imagen del personaje se producen con IA como herramienta.</p>
+</section>
+
+<section id="redes">
+<p class="etiqueta">Redes</p>
+<h2>Dónde encontrar a TioFab.</h2>
+<div class="redes">
+<a href="https://www.instagram.com/tiofab.oficial/" target="_blank" rel="noopener"><small>Instagram</small><span>@tiofab.oficial</span></a>
+<a href="https://www.tiktok.com/@tiofab.oficial" target="_blank" rel="noopener"><small>TikTok</small><span>@tiofab.oficial</span></a>
+<a href="https://www.youtube.com/@tiofab" target="_blank" rel="noopener"><small>YouTube</small><span>@tiofab</span></a>
+<a href="https://www.facebook.com/profile.php?id=1357626720776136" target="_blank" rel="noopener"><small>Facebook</small><span>TioFab</span></a>
+</div>
+</section>
+
+<section id="contacto">
+<p class="etiqueta">Contacto</p>
+<h2>Colaboraciones, prensa y propuestas.</h2>
+<p class="correo" id="correo">fabian_rj@hotmail.ch</p>
+<div class="acciones"><a class="btn lleno" href="mailto:fabian_rj@hotmail.ch">Escribir un correo</a><button class="btn" type="button" id="copiar">Copiar dirección</button></div>
+<p id="aviso" role="status" style="margin-top:14px;color:var(--mute);font-size:14px;min-height:1.4em"></p>
+</section>
+</main>
+<footer><span>© 2026 TioFab · El Subconsciente Majestral. Todos los derechos reservados.</span>
+<nav aria-label="Legal"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a></nav></footer></div>
+<script>
+(function(){var b=document.getElementById('copiar'),t=document.getElementById('correo'),a=document.getElementById('aviso');
+if(!b)return;
+b.addEventListener('click',function(){
+ function ok(){a.textContent='Dirección copiada.'}
+ function sel(){var r=document.createRange();r.selectNodeContents(t);var s=window.getSelection();s.removeAllRanges();s.addRange(r);a.textContent='Dirección seleccionada: cópiala con Ctrl+C.'}
+ try{navigator.clipboard.writeText(t.textContent.trim()).then(ok,sel)}catch(e){sel()}
+});})();
+</script>
+</body>
+</html>
